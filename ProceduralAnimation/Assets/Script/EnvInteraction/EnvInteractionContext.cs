@@ -26,6 +26,8 @@ public class EnvInteractionContext
         _rigidbody = rigidbody;
         _capsuleCollider = capsuleCollider;
         _rootTransform = rootTransform;
+        
+        CharacterShouldeHeight = LeftHandIKConstraint.data.root.position.y;
     }
     //readonly variables
     public TwoBoneIKConstraint LeftHandIKConstraint => _leftHandIKConstraint;
@@ -36,12 +38,14 @@ public class EnvInteractionContext
     public CapsuleCollider CapsuleCollider => _capsuleCollider;
     public Transform RootTransform => _rootTransform;
     
-    
+    public float CharacterShouldeHeight { get; set; }
+    public Collider CurrentInterceptingCollider { get; set; }
     public TwoBoneIKConstraint currentIKConstraint{get; private set;}
     public MultiRotationConstraint currentIKRotationConstraint{get; private set;}
     public Transform currentIKTargetTransform{get; private set;}
     public Transform currentShoulderTransform{get; private set;}
     public EBodySide currentBodySide{get; private set;}
+    public Vector3 ClosestPointOnColliderFromShoulder {get; set;} = Vector3.positiveInfinity;
     
     public void SetBodySide(Vector3 positionToCheck)
     {

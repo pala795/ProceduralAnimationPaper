@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Animations.Rigging;
 using UnityEngine.Assertions;
@@ -21,7 +22,14 @@ public class EnvInteractionStateMachine : StateManager<EnvInteractionStateMachin
     [SerializeField] private Rigidbody _rigidbody;
     [SerializeField] private CapsuleCollider _capsuleCollider;
 
-
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        if (Context != null && Context.CurrentInterceptingCollider != null)
+        {
+            Gizmos.DrawSphere(Context.ClosestPointOnColliderFromShoulder, 0.03f);
+        }
+    }
     private void Awake()
     {
         Validate();

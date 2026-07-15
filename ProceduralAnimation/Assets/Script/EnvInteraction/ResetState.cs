@@ -20,6 +20,7 @@ public class ResetState: EnvInteractionState
 
     public override EnvInteractionStateMachine.EEnvInteractionState GetNextState()
     {
+        return EnvInteractionStateMachine.EEnvInteractionState.Search;
         return StateKey;
     }
     public override void OnTriggerEnter(Collider other){}
