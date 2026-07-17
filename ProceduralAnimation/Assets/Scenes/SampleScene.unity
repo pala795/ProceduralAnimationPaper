@@ -141,7 +141,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 81bb9eea30387e442899949a80011e55, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.16417
+      value: -7.58
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 81bb9eea30387e442899949a80011e55, type: 3}
       propertyPath: m_LocalPosition.y
@@ -149,7 +149,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 81bb9eea30387e442899949a80011e55, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.10335
+      value: 2.69
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 81bb9eea30387e442899949a80011e55, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1322,7 +1322,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: 0.08265548, y: -8.680564e-10, z: 7.199598e-11, w: 0.9965782}
-  m_LocalPosition: {x: -0.16417, y: 2, z: -9.10335}
+  m_LocalPosition: {x: -7.58, y: 2, z: -2.31}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2488,7 +2488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdb90b913935e644baaa86c076d788e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Animation.Rigging::UnityEngine.Animations.Rigging.MultiRotationConstraint
-  m_Weight: 1
+  m_Weight: 0
   m_Data:
     m_ConstrainedObject: {fileID: 1914672047}
     m_SourceObjects:
@@ -2517,7 +2517,7 @@ MonoBehaviour:
       m_Item7:
         transform: {fileID: 0}
         weight: 0
-    m_Offset: {x: 0, y: 0, z: 0}
+    m_Offset: {x: 0, y: 90, z: 0}
     m_ConstrainedAxes:
       x: 1
       y: 1
@@ -2535,7 +2535,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aeda7bfbf984f2a4da5ab4b8967b115d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Animation.Rigging::UnityEngine.Animations.Rigging.TwoBoneIKConstraint
-  m_Weight: 1
+  m_Weight: 0
   m_Data:
     m_Root: {fileID: 488138750}
     m_Mid: {fileID: 2127256063}
@@ -2957,6 +2957,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Script.Character
   maxMovementSpeed: 2
+  rotationSpeed: 8
   _animator: {fileID: 755691101}
 --- !u!1 &814269443
 GameObject:
@@ -3147,7 +3148,7 @@ Transform:
   m_GameObject: {fileID: 834529478}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.44, y: 1.5205, z: 2.98}
+  m_LocalPosition: {x: -4.19, y: 1.5205, z: 18.44}
   m_LocalScale: {x: 0.4862, y: 3.135369, z: 0.20987932}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4173,7 +4174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdb90b913935e644baaa86c076d788e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Animation.Rigging::UnityEngine.Animations.Rigging.MultiRotationConstraint
-  m_Weight: 1
+  m_Weight: 0
   m_Data:
     m_ConstrainedObject: {fileID: 1878453796}
     m_SourceObjects:
@@ -4202,7 +4203,7 @@ MonoBehaviour:
       m_Item7:
         transform: {fileID: 0}
         weight: 0
-    m_Offset: {x: 0, y: 0, z: 0}
+    m_Offset: {x: 0, y: -90, z: 0}
     m_ConstrainedAxes:
       x: 1
       y: 1
@@ -4220,7 +4221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aeda7bfbf984f2a4da5ab4b8967b115d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Animation.Rigging::UnityEngine.Animations.Rigging.TwoBoneIKConstraint
-  m_Weight: 1
+  m_Weight: 0
   m_Data:
     m_Root: {fileID: 1559846610}
     m_Mid: {fileID: 85312996}
@@ -4427,7 +4428,7 @@ Transform:
   m_GameObject: {fileID: 1598661416}
   serializedVersion: 2
   m_LocalRotation: {x: 0.08265548, y: -8.6805635e-10, z: 7.199611e-11, w: 0.9965782}
-  m_LocalPosition: {x: -0.16417, y: 2, z: -9.10335}
+  m_LocalPosition: {x: -7.58, y: 2, z: -2.31}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4745,13 +4746,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1803694278}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.26432708, w: 0.96443313}
-  m_LocalPosition: {x: 4.4638, y: 2.074, z: 18.83}
+  m_LocalRotation: {x: -0, y: -0, z: -0.18771923, w: 0.9822228}
+  m_LocalPosition: {x: -0.92, y: 1.27, z: 11.81}
   m_LocalScale: {x: 1.8148999, y: 2.6798, z: 8.634145}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1905326763}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -30.654}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -21.639}
 --- !u!65 &1803694280
 BoxCollider:
   m_ObjectHideFlags: 0

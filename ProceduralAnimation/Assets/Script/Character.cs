@@ -3,12 +3,13 @@ using UnityEngine.Serialization;
 
 namespace Script
 {
-    public class Character : MonoBehaviour
+    public class Player : MonoBehaviour
     { 
         private InputSystem_Actions _playerInput;
         private Vector2 _moveInput;
         private bool _isMoving;
         [SerializeField] private float maxMovementSpeed;
+        [SerializeField] private float rotationSpeed = 500f;
         [SerializeField] private Animator _animator;
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Awake()
@@ -28,13 +29,22 @@ namespace Script
                 _isMoving = true;
                 Vector3 targetPosition = new Vector3(transform.position.x + _moveInput.x, transform.position.y, transform.position.z + _moveInput.y);
                 transform.position = Vector3.MoveTowards(transform.position, targetPosition, maxMovementSpeed * Time.deltaTime);  
-                transform.LookAt(targetPosition, Vector3.up);
+                //character rotation
+                //transform.LookAt(targetPosition, Vector3.up);
+                var direction = (targetPosition - transform.position).normalized;
+                var rotGoal = Quaternion.LookRotation(direction);
+                transform.rotation = Quaternion.Slerp(transform.rotation, rotGoal, rotationSpeed * Time.deltaTime);
             }
             else
             {
                 _isMoving = false;
                 _animator.SetBool("Walking", false);
             }
+        }
+
+        public bool GetIsMoving()
+        {
+            return _isMoving;
         }
     }
 }
